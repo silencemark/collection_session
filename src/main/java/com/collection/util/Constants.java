@@ -8,7 +8,7 @@ public class Constants {
 	
 	//项目路径
 	//public static String PROJECT_PATH = "http://www.canyindashi.com.cn/";
-	public static String PROJECT_PATH = "http://localhost/";
+	public static String PROJECT_PATH = "http://localhost:8080/";
 	//public static String PROJECT_PATH = "http://t.canyindashi.com.cn/";
 	
 

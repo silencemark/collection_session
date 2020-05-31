@@ -317,7 +317,7 @@ public class RedisUtil {
 	  */
 	 private static Jedis getJedis(){
 		 if(pool  == null){
-			 InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("com/catering/redis/redis.properties");
+			 InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("com/collection/redis/redis.properties");
 			 Properties p = new Properties();
 			 try {
 				p.load(in);
@@ -338,6 +338,7 @@ public class RedisUtil {
 			 config.setTestOnReturn(true);
 			 config.setMaxWaitMillis(maxwaitmillis);
 			 pool = new JedisPool(config,redishost,redispost,timeout,redispass);
+			 System.out.println(pool.toString());
 		 }
 		 try{
 			 return pool.getResource();
