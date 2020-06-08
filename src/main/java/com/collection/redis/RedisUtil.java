@@ -65,30 +65,32 @@ public class RedisUtil {
 		 return map;
 	 }
 	 public static void main(String[] args) {
+		 //deleteRedis("81PC");
+		 InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("com/collection/redis/redis.properties");
+		 Properties p = new Properties();
+		 try {
+			p.load(in);
+		 } catch (IOException e) {
+			LOGGER.error("redis.properties解析异常");
+			e.printStackTrace();
+		 }
+		 int maxidle = Integer.parseInt(String.valueOf(p.get("redis.maxidle")));
+		 int maxwaitmillis = Integer.parseInt(String.valueOf(p.get("redis.maxwaitmillis")));
+		 String redishost = String.valueOf(p.get("redis.redishost"));
+		 int redispost = Integer.parseInt(String.valueOf(p.get("redis.redispost")));
+		 int timeout = Integer.parseInt(String.valueOf(p.get("redis.timeout")));
+		 String redispass = String.valueOf(p.get("redis.redispass"));
 		 
-		 deleteRedis("81PC");
-//		 InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("com/hk/backer/redis/redis.properties");
-//		 Properties p = new Properties();
-//		 try {
-//			p.load(in);
-//		 } catch (IOException e) {
-//			LOGGER.error("redis.properties解析异常");
-//			e.printStackTrace();
-//		 }
-//		 int maxidle = Integer.parseInt(String.valueOf(p.get("redis.maxidle")));
-//		 int maxwaitmillis = Integer.parseInt(String.valueOf(p.get("redis.maxwaitmillis")));
-//		 String redishost = String.valueOf(p.get("redis.redishost"));
-//		 int redispost = Integer.parseInt(String.valueOf(p.get("redis.redispost")));
-//		 int timeout = Integer.parseInt(String.valueOf(p.get("redis.timeout")));
-//		 String redispass = String.valueOf(p.get("redis.redispass"));
-//		 
-//		 config = new JedisPoolConfig();
-//		 config.setMaxIdle(maxidle);
-//		 config.setTestOnBorrow(true);
-//		 config.setTestOnReturn(true);
-//		 config.setMaxWaitMillis(maxwaitmillis);
-//		 pool = new JedisPool(config,redishost,redispost,timeout,redispass);
-//		 LOGGER.debug(pool.getResource());
+		 config = new JedisPoolConfig();
+		 config.setMaxIdle(maxidle);
+		 config.setTestOnBorrow(true);
+		 config.setTestOnReturn(true);
+		 config.setMaxWaitMillis(maxwaitmillis);
+		 pool = new JedisPool(config,redishost,redispost,timeout,redispass);
+		 LOGGER.debug(pool.getResource());
+		 Map<String, Object> map = new HashMap<String, Object>();
+		 map.put("checkcode", 123456);
+		 setObject("15000042335", map, 1);
 	}
 	 
 	 /**
