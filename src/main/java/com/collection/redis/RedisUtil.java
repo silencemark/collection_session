@@ -91,6 +91,8 @@ public class RedisUtil {
 		 Map<String, Object> map = new HashMap<String, Object>();
 		 map.put("checkcode", 123456);
 		 setObject("15000042335", map, 1);
+		 Map<String, Object> hahahha = getObject("15000042335");
+		 System.out.println(hahahha);
 	}
 	 
 	 /**
