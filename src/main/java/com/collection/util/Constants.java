@@ -24,7 +24,7 @@ public class Constants {
 	public static  String TEST_OPENID = "oVFYwtwa7FHzS0F-z4QgnwosGep8"; //测试openid
 	
 	//接口加密参数
-	public static String INTERFACE_SECRET="hohengfashion";
+	public static String INTERFACE_SECRET="255.xgo";
 	
 	//微信开放平台
 	public static  String PC_APPID = "";
