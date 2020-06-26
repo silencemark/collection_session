@@ -166,6 +166,28 @@ public class RedisUtil {
 	 }
 	 
 	 /**
+	  * 将对象保存在reids中(秒)
+	  * @param key  
+	  * @param map  要保存的Map对象
+	  * @param age  时间 1 为1 seconds
+	  */
+	 public static void setSecondObject(String key, Map<String, Object> map,Integer age){
+		 remove(key);
+		 if(age==null){
+			 age = 1;
+		 }
+		 Jedis jedis = getJedis();
+		 if(map != null && key != null && jedis != null){
+			 Set<String> keys = map.keySet();
+			 for (String _key : keys) {
+				 jedis.hset(key, _key, map.get(_key).toString());
+			 }
+			 jedis.expire(key,age);
+		 }
+		 recycleJedisOjbect(jedis);
+	 }
+	 
+	 /**
 	  * 保存一个字符窜参数 到redis 中
 	  * @param key
 	  * @param param
