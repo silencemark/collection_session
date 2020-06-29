@@ -12,11 +12,14 @@ public class Constants {
 	public static String PROJECT_PATH = "http://117.18.12.193/";
 	//public static String PROJECT_PATH = "http://t.canyindashi.com.cn/";
 	
+	//服务器app上传文件地址
+	public static String APP_FILE_UPLOAD_PATH = "/home/silence/collection_web/upload/images";
 
 	
 	//static String COOK_DOMAIN = "www.canyindashi.com.cn";	//cookeis缓存域名
 	public static String COOK_DOMAIN = null;
 	//public static String COOK_DOMAIN = "t.canyindashi.com.cn";
+	
 	
 	
 	public static  String TEST_UNIONID = "o6wzrs-3E-FxOyQlueHaRbeYZsxI"; 	//测试unionid
