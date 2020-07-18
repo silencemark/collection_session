@@ -7,7 +7,7 @@ public class Constants {
 	//项目路径
 	//public static String PROJECT_PATH = "http://www..com.cn/";
 	//public static String PROJECT_PATH = "http://localhost:8080/";
-	public static String PROJECT_PATH = "http://117.18.12.193/";
+	public static String PROJECT_PATH = "http://www.xgomv.com/";
 	
 	//服务器app上传文件地址
 	public static String APP_FILE_UPLOAD_PATH = "/home/silence/collection_web/upload/images";
