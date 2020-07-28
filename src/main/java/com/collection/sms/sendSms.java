@@ -1,7 +1,6 @@
 package com.collection.sms;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -12,7 +11,6 @@ import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.log4j.Logger;
 
 import com.collection.util.Constants;
-import com.collection.util.DateUtil;
 import com.collection.util.Md5Util;
 
 public class sendSms {
@@ -59,7 +57,7 @@ public class sendSms {
 	
 	public static void main(String[] args) {
 		try {
-			sendSms("18621713625", Constants.smsTranslateCode.replace("code", "012485"));
+			sendSms("18621713625", Constants.smsTranslate1.replace("typename", "电风扇"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

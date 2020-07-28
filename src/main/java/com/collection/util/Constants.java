@@ -16,7 +16,7 @@ public class Constants {
 	public static String COOK_DOMAIN = "www.xgomv.com";
 	
 	//短信模板
-	public static String smsTranslateCode = "【享GO】您本次验证码是：code。如非本人操作，请忽略本短信 ";
+	//public static String smsTranslateCode = "【享GO】您本次验证码是：code。如非本人操作，请忽略本短信 ";
 	public static String smsTranslate1 = "【享GO】恭喜您出售的typename成功，请注意订单状态";
 	public static String smsTranslate2 = "【享GO】恭喜您， 您已升级为member，享受更多特权";
 	public static String smsTranslate3 = "【享GO】恭喜您抢购的typename成功，请注意订单状态";
@@ -44,10 +44,6 @@ public class Constants {
 	//接口加密参数
 	public static String INTERFACE_SECRET="255.xgo";
 	
-	//微信开放平台
-	public static  String PC_APPID = "";
-	public static  String PC_APPSECRET = "";
-
 	//(融云)
 	public static String cloudappkey = "kj7swf8o77ux2";//替换成您的appkey
 	public static String cloudappsecret = "Ye3gd38ghaM";//替换成匹配上面key的secret
