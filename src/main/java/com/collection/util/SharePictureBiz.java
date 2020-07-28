@@ -25,7 +25,7 @@ public class SharePictureBiz {
         BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);//创建图片
 
         //BufferedImage open = ImageIO.read(new URL(Constants.PROJECT_PATH + headimage));
-        BufferedImage product = ImageIO.read(new URL(Constants.PROJECT_PATH+"/upload/qrcodes/invitecode_20200716224050.png"));//读取互联网图片
+        BufferedImage product = ImageIO.read(new URL(Constants.PROJECT_PATH+"/upload/qrcodes/invitecode.png"));//读取互联网图片
 
         Graphics2D g = img.createGraphics();
         
@@ -43,7 +43,7 @@ public class SharePictureBiz {
             //BufferedImage qrcode = scaleImage(ImageIO.read(byteArrayInputStream));
             BufferedImage qrcode = ImageIO.read(byteArrayInputStream);
             if (qrcode != null)
-                g.drawImage(qrcode.getScaledInstance(520,530, Image.SCALE_DEFAULT),290, 1400, null);
+                g.drawImage(qrcode.getScaledInstance(380,380, Image.SCALE_DEFAULT),350, 1480, null);
             else
                 System.out.println("qrcode is null");
         } else {
@@ -85,10 +85,6 @@ public class SharePictureBiz {
     public static void main(String[] args) throws IOException {
 		//SharePictureBiz share=new SharePictureBiz();
 		//String urlstr="D:/upload/"+UUID.randomUUID().toString().replace("-", "")+".jpg";
-        //File file = new File("/project/keller"+urlstr);
-		//share.retrievePicture(urlstr, "/upload/images/9405816_202118647149_2.jpg", "D:/upload/qrcodes/1594826424_2e2b12423a9a4bd3ac37de7423d015b4.jpg");
-		//("D:"+urlstr, "pages/index/index","6_kiFf5I4BfgiNY75QLg2i3oVEcEL4ikDA5Nmst1w1o5C_S1JDlaISxkzVyeib-ZSyyuAdWjSDbPdAERSB6BnQVlUVWc_QPYx_lqEG_-qzQLAZHqfsMqizm5EoiSzHdVQHHtGn0pPr7fT77UOTAPFiABAHWM");
-		//share.retrievePictureTwo("D:"+urlstr, "pages/index/index","6_kiFf5I4BfgiNY75QLg2i3oVEcEL4ikDA5Nmst1w1o5C_S1JDlaISxkzVyeib-ZSyyuAdWjSDbPdAERSB6BnQVlUVWc_QPYx_lqEG_-qzQLAZHqfsMqizm5EoiSzHdVQHHtGn0pPr7fT77UOTAPFiABAHWM");
-		//share.retrievePictureThree("D:"+urlstr, "pages/index/index","6_kiFf5I4BfgiNY75QLg2i3oVEcEL4ikDA5Nmst1w1o5C_S1JDlaISxkzVyeib-ZSyyuAdWjSDbPdAERSB6BnQVlUVWc_QPYx_lqEG_-qzQLAZHqfsMqizm5EoiSzHdVQHHtGn0pPr7fT77UOTAPFiABAHWM");
+		//share.retrievePicture(urlstr,  "D:/upload/qrcodes/1594826424_2e2b12423a9a4bd3ac37de7423d015b4.jpg");
     }
 }
