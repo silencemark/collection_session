@@ -57,7 +57,7 @@ public class sendSms {
 	
 	public static void main(String[] args) {
 		try {
-			sendSms("18621713625", Constants.smsTranslate1.replace("typename", "电风扇"));
+			sendSms("15000042335", Constants.smsTranslate1.replace("typename", "iphone6"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
