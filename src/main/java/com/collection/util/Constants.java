@@ -13,6 +13,7 @@ public class Constants {
 	public static String APP_FILE_UPLOAD_PATH = "/home/silence/collection_web/upload/images";
 	
 	//cookeis缓存域名
+	//public static String COOK_DOMAIN = null;
 	public static String COOK_DOMAIN = "www.xgomv.com";
 	
 	//短信模板
@@ -25,7 +26,7 @@ public class Constants {
 	public static String sysSmsTranslate1 = "恭喜您出售价值price元的typename成功，请注意订单状态";
 	public static String sysSmsTranslate2 = "恭喜您， 您已升级为member，享受更多特权";
 	public static String sysSmsTranslate3 = "恭喜您抢购价值price元的typename成功，请注意订单状态";
-	public static String sysSmsTranslate4 = "恭喜您出售的typename，买家已付款成功，请及时确认订单";
+	public static String sysSmsTranslate4 = "恭喜您出售的typename，买家【nickname】已付款成功，请尽快审核订单";
 	
 	/**
 	 * 失败
