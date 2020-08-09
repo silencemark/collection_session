@@ -18,14 +18,14 @@ public class Constants {
 	
 	//短信模板
 	//public static String smsTranslateCode = "【享GO】您本次验证码是：code。如非本人操作，请忽略本短信 ";
-	public static String smsTranslate1 = "【享GO】恭喜您出售的typename成功，请注意订单状态";
-	public static String smsTranslate2 = "【享GO】恭喜您， 您已升级为member，享受更多特权";
-	public static String smsTranslate3 = "【享GO】恭喜您抢购的typename成功，请注意订单状态";
-	public static String smsTranslate4 = "【享GO】恭喜您出售的typename，买家已付款成功，请及时确认订单";
+	public static String smsTranslate1 = "【享GO】您有新订单，下单物品：typename，请尽快处理。";
+	//public static String smsTranslate2 = "【享GO】恭喜您， 您已升级为member，享受更多特权";
+	public static String smsTranslate3 = "【享GO】恭喜您参团成功，获得一个typename，请尽快处理。";
+	public static String smsTranslate4 = "【享GO】尊敬的用户，您的订单：{1}状态变化，请注意查看订单。";
 	
 	public static String sysSmsTranslate1 = "恭喜您出售价值price元的typename成功，请注意订单状态";
 	public static String sysSmsTranslate2 = "恭喜您， 您已升级为member，享受更多特权";
-	public static String sysSmsTranslate3 = "恭喜您抢购价值price元的typename成功，请注意订单状态";
+	public static String sysSmsTranslate3 = "恭喜您参团成功,抢购价值price元的typename成功，请注意订单状态尽快处理";
 	public static String sysSmsTranslate4 = "恭喜您出售的typename，买家【nickname】已付款成功，请尽快审核订单";
 	
 	/**
