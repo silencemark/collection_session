@@ -5,17 +5,21 @@ package com.collection.util;
 public class Constants {
 	
 	//项目路径
-	public static String PROJECT_PATH = "http://www.xgomv.com.cn/";
+	//public static String PROJECT_PATH = "http://www.xgomv.com/";
 	//public static String PROJECT_PATH = "http://localhost:8080/";
 	//public static String PROJECT_PATH = "http://101.132.177.82/";
+	public static String PROJECT_PATH = "http://slience.yiller.top/";
+	
+	public static String INVITE_PATH = "http://www.xgomv.com/";
 	
 	//服务器app上传文件地址
 	public static String APP_FILE_UPLOAD_PATH = "/home/silence/collection_web/upload/images";
 	
 	//cookeis缓存域名
 	//public static String COOK_DOMAIN = null;
-	public static String COOK_DOMAIN = "www.xgomv.com";
+	//public static String COOK_DOMAIN = "www.xgomv.com";s
 	//public static String COOK_DOMAIN = "101.132.177.82";
+	public static String COOK_DOMAIN = "slience.yiller.top";
 	
 	//短信模板
 	//public static String smsTranslateCode = "【享GO】您本次验证码是：code。如非本人操作，请忽略本短信 ";

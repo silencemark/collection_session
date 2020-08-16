@@ -1,9 +1,12 @@
 package com.collection.util;
 
 import java.awt.AlphaComposite;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
+import java.awt.RenderingHints;
 import java.awt.Transparency;
 import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
@@ -13,6 +16,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.UUID;
 
 import javax.imageio.ImageIO;
 
@@ -21,13 +25,14 @@ public class SharePictureBiz {
 	private static final Integer width = 1080;
     private static final Integer height = 2009;
 
-    public byte[] retrievePicture(String filePath, String qrcodeHttpUrl) throws IOException {
+    public byte[] retrievePicture(String filePath, String qrcodeHttpUrl, String invitecode) throws IOException {
         BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);//创建图片
 
         //BufferedImage open = ImageIO.read(new URL(Constants.PROJECT_PATH + headimage));
         BufferedImage product = ImageIO.read(new URL(Constants.PROJECT_PATH+"/upload/qrcodes/invitecode.png"));//读取互联网图片
 
         Graphics2D g = img.createGraphics();
+        
         
         g.drawImage(product.getScaledInstance(width, height, Image.SCALE_DEFAULT), 0, 0, null);
         //g.drawImage(scaleImage(ImageIO.read(new File( "D:/qrcode.png"))).getScaledInstance(520,530, Image.SCALE_DEFAULT),290, 660, null);
@@ -51,6 +56,13 @@ public class SharePictureBiz {
         }
         //g.drawImage(open.getScaledInstance(120, 120, Image.SCALE_DEFAULT), 490, 1600, null);
 
+        g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("宋体",Font.BOLD,50));
+        // 打印字符串，
+        g.drawString("邀请码:"+invitecode, 360, 1450);
+        g.dispose();
+        
         g.dispose();
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         if (filePath == null) {
@@ -82,9 +94,9 @@ public class SharePictureBiz {
         return image;
     }
     
-    public static void main(String[] args) throws IOException {
-		//SharePictureBiz share=new SharePictureBiz();
-		//String urlstr="D:/upload/"+UUID.randomUUID().toString().replace("-", "")+".jpg";
-		//share.retrievePicture(urlstr,  "D:/upload/qrcodes/1594826424_2e2b12423a9a4bd3ac37de7423d015b4.jpg");
-    }
+    /*public static void main(String[] args) throws IOException {
+		SharePictureBiz share=new SharePictureBiz();
+		String urlstr="D:/upload/"+UUID.randomUUID().toString().replace("-", "")+".jpg";
+		share.retrievePicture(urlstr,  "D:/upload/qrcodes/1594826424_2e2b12423a9a4bd3ac37de7423d015b4.jpg","2wnds5");
+    }*/
 }
