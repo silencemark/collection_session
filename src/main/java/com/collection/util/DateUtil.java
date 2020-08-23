@@ -25,20 +25,35 @@ public class DateUtil {
 	    return day + "天" + hour + "小时" + min + "分钟";
 	}
 	
+	private static SimpleDateFormat YMDHMS = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	
 	/**
 	 * 转换时间格式
 	 * @param text
 	 * @return
 	 */
-	public static Date textToDate(String text){
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	public static Date StringToDate(String text){
+		Date date = null;
 		try {
-			date = sdf.parse(text);
+			date = YMDHMS.parse(text);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return date;
+	}
+	
+	/**
+	 * 转换时间格式
+	 * @param text
+	 * @return
+	 */
+	public static String formatTime(Date date){
+		String dateString = "";
+		try {
+			dateString = YMDHMS.format(date);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dateString;
 	}
 }
