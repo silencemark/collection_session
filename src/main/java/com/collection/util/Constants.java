@@ -5,20 +5,16 @@ package com.collection.util;
 public class Constants {
 	
 	//项目路径
-	//public static String PROJECT_PATH = "http://www.xgomv.com/";
 	//public static String PROJECT_PATH = "http://localhost:8080/";
-	//public static String PROJECT_PATH = "http://101.132.177.82/";
 	public static String PROJECT_PATH = "https://www.goaragekit.cn/";
 	
-	public static String INVITE_PATH = "http://www.xgomv.com/";
+	public static String INVITE_PATH = "https://www.goaragekit.cn/";
 	
 	//服务器app上传文件地址
 	public static String APP_FILE_UPLOAD_PATH = "/home/silence/collection_web/upload/images";
 	
 	//cookeis缓存域名
 	//public static String COOK_DOMAIN = null;
-	//public static String COOK_DOMAIN = "www.xgomv.com";s
-	//public static String COOK_DOMAIN = "101.132.177.82";
 	public static String COOK_DOMAIN = "www.goaragekit.cn";
 	
 	//短信模板
